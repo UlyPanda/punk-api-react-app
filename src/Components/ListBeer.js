@@ -3,7 +3,7 @@ import BeerComponent from './BeerComponent';
 
 const ListBeer = (props) => {
     return (
-        props.beerList.map((beer) => {
+        props.beers.map((beer) => {
             return <BeerComponent key={beer.id} beer={beer} />
         })
     )
