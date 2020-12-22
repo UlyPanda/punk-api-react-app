@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './Beer-logo.png';
 import './App.css';
 import { Component } from 'react';
 import ListBeer from './Components/ListBeer';

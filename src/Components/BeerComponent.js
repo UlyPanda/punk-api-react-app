@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import crown from './crown-logo.png';
 
 
 class BeerComponent extends Component {
@@ -35,7 +36,10 @@ class BeerComponent extends Component {
                 {this.state.description ? this.props.beer.description : null}
            </p>
            </div>
-           <button id="like-button" onClick={() => this.likeButton()}>{this.state.isLiked ? likedIcon : unlikedIcon}</button>
+           <button id="like-button" onClick={() => this.likeButton()}>{this.state.isLiked ? unlike : like}</button>
+           <div>
+             {this.state.isLiked ? crown : null}
+           </div>
       </div>
     )
   }
