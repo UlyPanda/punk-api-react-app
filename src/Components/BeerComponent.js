@@ -1,8 +1,8 @@
-import { Component } from 'react';
+import React from 'react';
 import crown from './crown-logo.png';
 
 
-class BeerComponent extends Component {
+class BeerComponent extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -10,6 +10,7 @@ class BeerComponent extends Component {
       details: false
     }
   }
+  
   likeButton = () => {
     this.setState({
       isLiked: !this.state.isLiked
@@ -23,22 +24,22 @@ class BeerComponent extends Component {
   }
 
   render() {
-    const
+    const beersIcon = <img className='beer-icon' src={crown} alt="beers icon"
 
     return (
       <div>
       <img src={this.props.beers.image_url} />
       <div className='card-outline'>
       <h4 className='beer-name'> {this.props.beers.name} </h4>
-      <button type="button" class="btn btn-primary" onClick={() => this.showDescription()}>{this.state.description ? "Hide" : "Description"}</button><br></br>
+      <button type="button" class="btn btn-primary" onClick={() => this.showDescription()}>{this.state.description ? "Hide" : "Description"}</button>
+      <br></br>
            <p className="card-text">
-              <br></br>
                 {this.state.description ? this.props.beer.description : null}
            </p>
-           </div>
+      </div>
            <button id="like-button" onClick={() => this.likeButton()}>{this.state.isLiked ? unlike : like}</button>
            <div>
-             {this.state.isLiked ? crown : null}
+             {this.state.isLiked ? beersIcon : null}
            </div>
       </div>
     )
