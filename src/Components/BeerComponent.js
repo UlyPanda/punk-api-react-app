@@ -1,5 +1,5 @@
 import React from 'react';
-import crown from './crown-logo.png';
+import crown from '../crownlogo.png';
 
 
 class BeerComponent extends React.Component {
@@ -28,16 +28,16 @@ class BeerComponent extends React.Component {
 
     return (
       <div>
-      <img src={this.props.beers.image_url} />
+      <img src={this.props.beer.name} />
       <div className='card-outline'>
-      <h4 className='beer-name'> {this.props.beers.name} </h4>
-      <button type="button" class="btn btn-primary" onClick={() => this.showDescription()}>{this.state.description ? "Hide" : "Description"}</button>
+      <h4 className='beer-name'> {this.props.beer.name} </h4>
+      <button type="button" class="btn btn-primary" onClick={() => this.showDetails()}>{this.state.details ? "Hide" : "Description"}</button>
       <br></br>
            <p className="card-text">
-                {this.state.description ? this.props.beer.description : null}
+                {this.state.details ? this.props.beer.description : null}
            </p>
       </div>
-           <button id="like-button" onClick={() => this.likeButton()}>{this.state.isLiked ? unlike : like}</button>
+           <button id="like-button" onClick={() => this.likeButton()}>{this.state.isLiked ? 'unlike' : 'like' }</button>
            <div>
              {this.state.isLiked ? beersIcon : null}
            </div>
