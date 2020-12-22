@@ -24,7 +24,7 @@ class BeerComponent extends React.Component {
   }
 
   render() {
-    const beersIcon = <img className='beer-icon' src={crown} alt="beers icon"
+    const beersIcon = <img className='beer-icon' src={crown} alt="beers icon"/>
 
     return (
       <div>
